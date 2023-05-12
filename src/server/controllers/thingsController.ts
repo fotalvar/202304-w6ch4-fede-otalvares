@@ -17,3 +17,18 @@ export const getThing = (req: Request, res: Response) => {
 
   res.status(200).json({ filterThings });
 };
+
+export const deleteThing = (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const thingPosition = things.findIndex((thing) => thing.id === id);
+
+  if (thingPosition === -1) {
+    res.status(404).json({ message: "Thing not found" });
+    return;
+  }
+
+  things.splice(thingPosition, 1);
+
+  res.status(200).json("Thing deleted!");
+};
