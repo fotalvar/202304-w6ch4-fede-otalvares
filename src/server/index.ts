@@ -19,4 +19,4 @@ app.get("/things/:id", getThing);
 
 app.delete("/things/:id", deleteThing);
 
-app.post("/things/new-thing", addThings);
+app.post("/things", addThings);
