@@ -15,8 +15,8 @@ app.use(express.json());
 
 app.get("/things", getThings);
 
-app.get("/things/:id", getThing);
+app.get("/things/:idThings", getThing);
 
-app.delete("/things/:id", deleteThing);
+app.delete("/things/:idThings", deleteThing);
 
 app.post("/things", addThings);
