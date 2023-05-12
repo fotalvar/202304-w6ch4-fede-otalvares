@@ -1,7 +1,11 @@
-export interface ThingsDataStructure {
+export interface ThingStructure {
   name: string;
 }
 
-export interface ThingStructure extends ThingsDataStructure {
-  id: number;
+export interface ThingDataStructure extends ThingStructure {
+  id: string;
+}
+
+export interface ThingsDataStructure {
+  things: ThingDataStructure[];
 }

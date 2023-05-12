@@ -1,8 +1,8 @@
-import { type ThingStructure } from "./types";
+import { type ThingDataStructure } from "./types";
 
-const things: ThingStructure[] = [
+const things: ThingDataStructure[] = [
   {
-    id: 1,
+    id: "1",
     name: "Frontend",
   },
 ];
