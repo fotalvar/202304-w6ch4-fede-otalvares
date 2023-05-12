@@ -7,9 +7,9 @@ export const getThings = (reg: Request, res: Response) => {
 };
 
 export const getThing = (req: Request, res: Response) => {
-  const { id } = req.params;
+  const { idThing } = req.params;
 
-  const filterThings = things.filter((thing) => thing.id === id);
+  const filterThings = things.filter((thing) => thing.id === idThing);
 
   if (filterThings.length === 0) {
     res.status(404).json({ message: "" });
@@ -20,9 +20,9 @@ export const getThing = (req: Request, res: Response) => {
 };
 
 export const deleteThing = (req: Request, res: Response) => {
-  const { id } = req.params;
+  const { idThings } = req.params;
 
-  const thingPosition = things.findIndex((thing) => thing.id === id);
+  const thingPosition = things.findIndex((thing) => thing.id === idThings);
 
   if (thingPosition === -1) {
     res.status(404).json({ message: "Thing not found" });
