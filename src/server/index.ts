@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import {
+  addThings,
   deleteThing,
   getThing,
   getThings,
@@ -17,3 +18,5 @@ app.get("/things", getThings);
 app.get("/things/:id", getThing);
 
 app.delete("/things/:id", deleteThing);
+
+app.post("/things/new-thing", addThings);
